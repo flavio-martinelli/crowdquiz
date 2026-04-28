@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz Host</title>
+    <link rel="stylesheet" href="/static/common/style.css?v=9">
+    <link rel="stylesheet" href="/static/host/style.css?v=9">
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+    <!-- LOBBY -->
+    <div id="view-lobby" class="view active">
+        <div class="lobby-content">
+            <h1 id="game-title" class="lobby-title">Quiz</h1>
+            <div class="lobby-join">
+                <div id="qrcode" class="qr-container"></div>
+                <div class="join-url">
+                    <p class="join-label">Join at:</p>
+                    <p id="join-url" class="join-link"></p>
+                    <div class="url-override">
+                        <input id="url-input" type="text" class="url-input" placeholder="Paste tunnel URL here..." onkeydown="if(event.key==='Enter')setTunnelUrl()">
+                        <button onclick="setTunnelUrl()" class="btn-set-url">Set</button>
+                    </div>
+                </div>
+            </div>
+            <div id="quiz-picker" class="quiz-picker"></div>
+            <div class="lobby-players">
+                <div class="player-count"><span id="player-count">0</span> players</div>
+                <div id="player-list" class="player-list"></div>
+            </div>
+            <button id="btn-start" class="btn-start" disabled>START</button>
+        </div>
+    </div>
+
+    <!-- QUESTION -->
+    <div id="view-question" class="view">
+        <div class="timer-bar"><div id="timer-fill" class="timer-bar-fill"></div></div>
+        <div class="question-header">
+            <span id="q-counter" class="q-counter"></span>
+            <span id="q-type-badge" class="q-type-badge"></span>
+            <span id="answer-counter" class="answer-counter"></span>
+        </div>
+        <div class="question-text-container">
+            <h2 id="q-text" class="question-text"></h2>
+        </div>
+        <div id="options-container" class="options-container"></div>
+        <div class="question-controls">
+            <button id="btn-pause" onclick="togglePause()" class="btn-pause">⏸ PAUSE</button>
+            <button onclick="stopQuiz()" class="btn-stop">STOP QUIZ</button>
+        </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div id="view-results" class="view">
+        <div class="results-content">
+            <h2 id="results-question" class="results-question"></h2>
+            <div id="results-display" class="results-display"></div>
+            <button id="btn-next-results" class="btn-next">NEXT</button>
+            <button onclick="stopQuiz()" class="btn-stop">STOP QUIZ</button>
+        </div>
+    </div>
+
+    <!-- SCOREBOARD -->
+    <div id="view-scoreboard" class="view">
+        <div class="scoreboard-content">
+            <h2 class="scoreboard-title">Scoreboard</h2>
+            <div id="scoreboard-list" class="scoreboard-list"></div>
+            <button id="btn-next-scoreboard" class="btn-next">NEXT</button>
+            <button onclick="stopQuiz()" class="btn-stop">STOP QUIZ</button>
+        </div>
+    </div>
+
+    <!-- FINISHED -->
+    <div id="view-finished" class="view">
+        <div class="finished-content">
+            <h1 class="finished-title">Game Over!</h1>
+            <div id="podium" class="podium"></div>
+            <div id="full-rankings" class="full-rankings"></div>
+            <button id="btn-play-again" class="btn-next">PLAY AGAIN</button>
+        </div>
+        <div id="confetti" class="confetti-container"></div>
+    </div>
+
+    <!-- Persistent mini QR code (visible during game, not in lobby) -->
+    <div id="mini-qr" class="mini-qr hidden">
+        <div id="mini-qrcode" class="mini-qr-code"></div>
+    </div>
+
+    <script src="/static/host/app.js?v=9"></script>
+</body>
+</html>

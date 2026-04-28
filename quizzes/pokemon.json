@@ -1,0 +1,74 @@
+{
+  "title": "🔴 Pokémon Quiz",
+  "description": "Gotta know 'em all!",
+  "questions": [
+    {
+      "type": "quiz",
+      "text": "Which Pokémon is #001 in the Pokédex?",
+      "options": ["Charmander", "Squirtle", "Bulbasaur", "Pikachu"],
+      "correct": 2,
+      "time_limit": 20
+    },
+    {
+      "type": "quiz",
+      "text": "What type is Gengar?",
+      "options": ["Dark / Psychic", "Ghost / Poison", "Ghost / Dark", "Poison / Psychic"],
+      "correct": 1,
+      "time_limit": 20
+    },
+    {
+      "type": "quiz",
+      "text": "How many Pokémon were in the original Gen 1 Pokédex?",
+      "options": ["148", "149", "150", "151"],
+      "correct": 3,
+      "time_limit": 20
+    },
+    {
+      "type": "quiz",
+      "text": "Which move does Pikachu famously learn at level 1?",
+      "options": ["Thunderbolt", "Thunder Shock", "Quick Attack", "Thunder Wave"],
+      "correct": 1,
+      "time_limit": 20
+    },
+    {
+      "type": "quiz",
+      "text": "What item is needed to evolve Pikachu into Raichu?",
+      "options": ["Fire Stone", "Moon Stone", "Thunder Stone", "Sun Stone"],
+      "correct": 2,
+      "time_limit": 20
+    },
+    {
+      "type": "quiz",
+      "text": "Which Pokémon is known as the 'Legendary Bird of Fire'?",
+      "options": ["Zapdos", "Articuno", "Ho-Oh", "Moltres"],
+      "correct": 3,
+      "time_limit": 20
+    },
+    {
+      "type": "quiz",
+      "text": "What is Eevee's Water-type evolution called?",
+      "options": ["Vaporeon", "Aquareon", "Jolteon", "Flareon"],
+      "correct": 0,
+      "time_limit": 20
+    },
+    {
+      "type": "poll",
+      "text": "Which is the best starter Pokémon of all time?",
+      "options": ["Bulbasaur", "Charmander", "Squirtle", "Cyndaquil", "Totodile", "Chikorita"],
+      "time_limit": 30
+    },
+    {
+      "type": "quiz",
+      "text": "Which Pokémon can learn both 'Surf' and 'Fly'?",
+      "options": ["Dragonite", "Gyarados", "Charizard", "Mew"],
+      "correct": 3,
+      "time_limit": 25
+    },
+    {
+      "type": "poll",
+      "text": "Who would win in a fight?",
+      "options": ["Mewtwo", "Arceus", "Rayquaza", "Giratina"],
+      "time_limit": 30
+    }
+  ]
+}

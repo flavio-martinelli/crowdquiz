@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <title>Join Quiz</title>
+    <link rel="stylesheet" href="/static/common/style.css?v=8">
+    <link rel="stylesheet" href="/static/player/style.css?v=8">
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+<body>
+
+    <!-- JOIN -->
+    <div id="view-join" class="view active">
+        <div class="join-content">
+            <h1 class="join-title">Join Quiz</h1>
+            <input id="name-input" type="text" class="name-input" placeholder="Your name" maxlength="16" autocomplete="off">
+            <p class="emoji-label">Pick your emoji:</p>
+            <div id="emoji-grid" class="emoji-grid"></div>
+            <button id="btn-join" class="btn-join" disabled>JOIN</button>
+            <p id="join-error" class="join-error hidden"></p>
+        </div>
+    </div>
+
+    <!-- WAITING IN LOBBY -->
+    <div id="view-waiting" class="view">
+        <div class="waiting-content">
+            <div id="my-emoji" class="my-emoji animate-pulse"></div>
+            <p id="my-name" class="my-name"></p>
+            <p class="waiting-text">Waiting for host to start...</p>
+        </div>
+    </div>
+
+    <!-- ANSWERING -->
+    <div id="view-answering" class="view">
+        <div class="timer-bar"><div id="player-timer-fill" class="timer-bar-fill"></div></div>
+        <div class="answering-header">
+            <span id="player-q-counter" class="player-q-counter"></span>
+            <span id="player-q-type" class="q-type-badge"></span>
+        </div>
+        <p id="player-q-text" class="player-q-text"></p>
+        <div id="player-options" class="player-options"></div>
+    </div>
+
+    <!-- ANSWERED (waiting for results) -->
+    <div id="view-answered" class="view">
+        <div class="answered-content">
+            <div id="answered-emoji" class="answered-indicator">&#10003;</div>
+            <p class="answered-text">Answer submitted!</p>
+            <p class="waiting-text">Waiting for others...</p>
+        </div>
+    </div>
+
+    <!-- RESULT FEEDBACK -->
+    <div id="view-result" class="view">
+        <div class="result-content">
+            <div id="result-icon" class="result-icon"></div>
+            <p id="result-text" class="result-text"></p>
+        </div>
+    </div>
+
+    <!-- PLAYER SCOREBOARD -->
+    <div id="view-scoreboard" class="view">
+        <div class="player-scoreboard-content">
+            <h2 class="player-scoreboard-title">Scoreboard</h2>
+            <div id="player-scoreboard" class="player-scoreboard"></div>
+        </div>
+    </div>
+
+    <!-- GAME OVER -->
+    <div id="view-gameover" class="view">
+        <div class="gameover-content">
+            <div id="final-emoji" class="final-emoji"></div>
+            <h2 id="final-rank" class="final-rank"></h2>
+            <p id="final-score" class="final-score"></p>
+            <p id="final-message" class="final-message"></p>
+        </div>
+    </div>
+
+    <script src="/static/player/app.js?v=8"></script>
+</body>
+</html>

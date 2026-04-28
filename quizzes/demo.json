@@ -1,0 +1,19 @@
+{
+  "title": "🎮 Demo — How to Play",
+  "description": "A quick warm-up to learn how the quiz works",
+  "questions": [
+    {
+      "type": "quiz",
+      "text": "When was last year's retreat?",
+      "options": ["Jan 13–15", "Jan 27–29", "Feb 3–5", "Feb 17–19"],
+      "correct": 0,
+      "time_limit": 30
+    },
+    {
+      "type": "poll",
+      "text": "Who won the PowerPoint Karaoke last year?",
+      "options": ["Sophia", "Johanni", "Wulfram", "Kasper", "Louis", "Zihan", "Dani", "Tam", "Olivier", "Flavio", "James", "Ariane", "Alex", "Shuqi", "Lucas", "Aude", "Alice", "Meg"],
+      "time_limit": 45
+    }
+  ]
+}
