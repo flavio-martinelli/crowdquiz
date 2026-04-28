@@ -1,4 +1,14 @@
+# Claude Code
+.claude/
+
+# Python
 .venv/
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.env
+
+# macOS
 .DS_Store
