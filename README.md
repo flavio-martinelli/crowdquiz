@@ -1,6 +1,6 @@
 # CrowdQuiz
 
-Built with AI for hosting party quizzes. No guarantees.
+Built with AI for hosting party quizzes. It works, but no guarantees.
 
 Real-time quiz and poll system for groups. The host runs it on a laptop, everyone else joins from their phone by scanning a QR code.
 
